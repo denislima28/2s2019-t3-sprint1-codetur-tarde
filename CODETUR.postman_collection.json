@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "af681518-efe9-4036-97e8-f9af32528567",
+		"name": "CODETUR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOGAR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"admin@codetur.com\",\n\t\"senha\": \"12345\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/conta",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CADASTRAR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGNvZGV0dXIuY29tIiwianRpIjoiMSIsImV4cCI6MTU2NDc2ODkzMCwiaXNzIjoiQ29kZVR1ci5XZWJBcGkiLCJhdWQiOiJDb2RlVHVyLldlYkFwaSJ9.l_IXh5FqbXeZTappBUVWuIcChyc_YQN8SVXrE6pE8k0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Titulo\": \"Pacote INATIVO\",\n\t\"Descricao\": \"Teste para cadastro\",\n\t\"UrlImagem\": \"https://www.google.com.br/url?sa=i&source=images&cd=&ved=2ahUKEwjEnY3vteLjAhWHEbkGHbgeCTsQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.rdc-ferias.com.br%2F&psig=AOvVaw29MPQKxxnu7ocY85_1jXZg&ust=1564774623382053\",\n\t\"DataInicio\": \"2019-12-12\",\n\t\"DataFim\": \"2020-12-12\",\n    \"Ativo\": \"false\" \n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/pacote",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pacote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTAR TODOS PACOTES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/pacote/listar",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pacote",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTAR PACOTES ATIVOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/pacote/listarativos",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pacote",
+						"listarativos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUSCAR UM PACOTE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/pacote/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pacote",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALTERAR STATUS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/pacote/alterarstatus/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pacote",
+						"alterarstatus",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDITAR PACOTE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"titulo\": \"Pacote alterado novamente\",\r\n    \"descricao\": \"Pacote para visitar as maiores empresas do mundo em TI, converse com os Ceos\",\r\n    \"urlImagem\": \"https://apidiag276.blob.core.windows.net/api/portal/2016/10/foto-800.png\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/pacote/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pacote",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
